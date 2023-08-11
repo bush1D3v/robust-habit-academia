@@ -27,18 +27,18 @@ const nameDiv = document.getElementById('nome')
 const phoneDiv = document.getElementById('telefone')
 const errorClass = 'error'
 
-function contemQualquerNumero(texto){
+const verificarNumeral = (texto) => {
     return /\d/.test(texto);
 }
 
-function contemQualquerLetra(numero) {
+const verificarString = (numero) => {
     return /[a-zA-Z]/.test(numero);
-  }
+}
 
 function nameValidation(){
     const nameValue = nameInput.value.trim()
 
-    if(nameValue.length < 6 || contemQualquerNumero(nameValue)){
+    if(nameValue.length < 6 || verificarNumeral(nameValue)){
         nameDiv.classList.add(errorClass)
         return false
     }else{
@@ -50,7 +50,7 @@ function nameValidation(){
 function phoneValidation(){
     const phoneValue = phoneInput.value.trim()
 
-    if(phoneValue.length < 10 || contemQualquerLetra(phoneValue)){
+    if(phoneValue.length < 10 || verificarString(phoneValue)){
         phoneDiv.classList.add(errorClass)
         return false
     }else{
