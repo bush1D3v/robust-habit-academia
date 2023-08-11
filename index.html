@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="src/css/keyframes.css">
     <link rel="stylesheet" href="src/css/style.css">
     <link rel="stylesheet" href="src/css/responsive.css">
+    <link rel="stylesheet" href="src/css/form.css">
     <title>Robust Habit - Fitness Gym</title>
 </head>
 
@@ -186,10 +187,16 @@
         <div class="area-do-formulario">
             <h1 data-animation="bottom">ENTRE EM CONTATO</h1>
             <p data-animation="bottom">Matricule-se agora mesmo! Fale com um de nossos atendentes.</p>
-            <form class="formulario">
-                <input type="text" name="name" placeholder="NOME" required data-animation="bottom">
-                <input type="tel" name="phone" placeholder="TELEFONE" required data-animation="bottom">
-                <input type="submit" value="SOLICITAR CONTATO" data-animation="bottom">
+            <form action="" class="formulario">
+                    <div class="nome" id="nome">
+                        <small>Nome inválido</small>
+                        <input type="text" name="name" placeholder="NOME" data-animation="bottom" id="name">
+                    </div>
+                    <div class="telefone" id="telefone">
+                        <small>Telefone inválido</small>
+                        <input type="tel" name="phone" placeholder="TELEFONE"  data-animation="bottom" id="phone">
+                    </div>
+                <input type="submit" value="SOLICITAR CONTATO" id="submit" data-animation="bottom">
             </form>
         </div>
 

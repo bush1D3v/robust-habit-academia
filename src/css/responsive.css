@@ -150,12 +150,14 @@
             text-align: center;
             gap: 10px;
             & .formulario{
-                & input{
-                    margin: 0;
-                    &:nth-child(1){
+                & div{
+                    & input{
                         margin: auto 20px 20px 20px;
                     }
-                    &:last-child{
+                }
+                & input{
+                    margin: 0;
+                    &#submit{
                         margin: auto;
                         margin-top: 20px;
                     }

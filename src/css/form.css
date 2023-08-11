@@ -1,0 +1,26 @@
+div #nome.error,
+div #telefone.error{
+    & small{
+        display: block;
+        text-align: end;
+        margin-right: 30px;
+        font-size: 16px;
+        color: var(--vermelho-claro-medio);
+    }
+    & input{
+        background-color: rgba(255, 56, 56, 0.2);
+        border-color: rgb(255, 56, 56);
+        &::placeholder{
+            color: rgba(255, 255, 255, 0.8);
+        }
+    }
+}
+
+@media(max-width:1024px){
+    div #nome.error,
+div #telefone.error{
+    & small{
+        margin-right: 20px;
+    }
+}
+}
