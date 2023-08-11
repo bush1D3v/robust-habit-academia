@@ -9,5 +9,5 @@
 *::-webkit-scrollbar-thumb {
     background-color: var(--vermelho-padrao);
     border-radius: 10px;
-    border: 2px solid var(--preto);
+    border: 2px solid var(--branco);
 }
