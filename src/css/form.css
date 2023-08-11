@@ -18,9 +18,9 @@ div #telefone.error{
 
 @media(max-width:1024px){
     div #nome.error,
-div #telefone.error{
-    & small{
-        margin-right: 20px;
+    div #telefone.error{
+        & small{
+            margin-right: 20px;
+        }
     }
-}
 }

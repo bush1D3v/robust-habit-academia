@@ -27,10 +27,18 @@ const nameDiv = document.getElementById('nome')
 const phoneDiv = document.getElementById('telefone')
 const errorClass = 'error'
 
+function contemQualquerNumero(texto){
+    return /\d/.test(texto);
+}
+
+function contemQualquerLetra(numero) {
+    return /[a-zA-Z]/.test(numero);
+  }
+
 function nameValidation(){
     const nameValue = nameInput.value.trim()
 
-    if(nameValue.length < 5){
+    if(nameValue.length < 6 || contemQualquerNumero(nameValue)){
         nameDiv.classList.add(errorClass)
         return false
     }else{
@@ -42,7 +50,7 @@ function nameValidation(){
 function phoneValidation(){
     const phoneValue = phoneInput.value.trim()
 
-    if(phoneValue.length < 10){
+    if(phoneValue.length < 10 || contemQualquerLetra(phoneValue)){
         phoneDiv.classList.add(errorClass)
         return false
     }else{
@@ -59,14 +67,15 @@ form.addEventListener("submit", (event) => {
         console.log({
             nome: nameInput.value.trim(),
             telefone: phoneInput.value.trim()
-        });
+        })
+        form.reset()
     }
   })
 
-  nameInput.addEventListener('keydown', () => {
+  nameInput.addEventListener('keyup', () => {
     nameValidation()
   })
 
-  phoneInput.addEventListener('keydown', () => {
+  phoneInput.addEventListener('keyup', () => {
     phoneValidation()
   })
