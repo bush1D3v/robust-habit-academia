@@ -2,7 +2,6 @@ html{
     font-size: 62.5%;
     background-color: var(--vermelho-padrao);
     scroll-behavior: smooth;
-    overflow-x: hidden;
 }
 
 .btn{
@@ -10,13 +9,11 @@ html{
     padding: clamp(6.5px, 0.9vh, 10px) 29.72px;
     position: relative;
     clip-path: polygon(82% 0%, 100% 40%, 100% 100%, 0 100%, 0 0);
-    cursor: pointer;
 }
 
 main{
     overflow-x: hidden;
     height: 100vh;
-    background-color: var(--vermelho-padrao);
     background-image: url(../images/rectangle-background-1.png), url(../images/rectangle-background-2.png), url(../images/rectangle-background-3.png);
     background-repeat: no-repeat;
     background-size: contain;
@@ -27,7 +24,6 @@ main{
             display: flex;
             padding: clamp(15px, 2vh, 25px) clamp(20px, 5.5vw, 69px);
             justify-content: space-between;
-            align-items: center;
             & ul{
                 display: flex;
                 gap: clamp(1.5rem, 2.1vw, 4rem);
@@ -41,7 +37,6 @@ main{
                         height: 7%;
                         bottom: 3.5px;
                         position: absolute;
-                        color: transparent;
                         transform: scaleX(0);
                         transform-origin: right;
                         box-shadow: 0px 4px var(--preto);
@@ -53,12 +48,6 @@ main{
                     }
                     &:last-child::before{
                         width: 0%;
-                    }
-                    & .btn{
-                        transition: all 0.2s ease-in-out;
-                        &:hover{
-                            opacity: 0.75;
-                        }
                     }
                 }
             }
@@ -93,10 +82,6 @@ main{
                 margin-top: 28px;
                 width: fit-content;
                 font-size: clamp(2.8rem, 2.22vw, 3.6rem);
-                transition: all 0.2s ease-in-out;
-                &:hover{
-                    opacity: 0.75;
-                }
                 & img{
                     margin-left: 5px;
                 }
@@ -109,10 +94,9 @@ main{
     & .nav-bar{
         background-color: var(--preto);
         height: 10vh;
-        overflow-x: hidden;
         & .texto-infinito{
-            overflow-x: hidden;
             height: 100%;
+            width: fit-content;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -120,29 +104,31 @@ main{
             font-size: clamp(2.8rem, 2.22vw, 3.6rem);
             white-space: nowrap;
             animation: infiniteText 12s infinite linear;
-            width: fit-content;
+        }
+    }
+    & .btn{
+        transition: all 0.2s ease-in-out;
+        &:hover{
+            opacity: 0.75;
         }
     }
 }
 
 .secao-de-equipamentos{
     min-height: 100vh;
-    background-color: var(--vermelho-padrao);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 50px;
     padding: clamp(10px, 2vw, 20px) clamp(20px, 5.5vw, 69px) clamp(20px, 5.5vw, 69px);
-    & .text-area{
-        & h2{
-            text-align: center;
-            font-size: clamp(5.5rem, 5.69vw, 11rem);
-            letter-spacing: 5px;
-            & span{
-                font-size: clamp(3.5rem, 4.30vw, 7.6rem);
-                font-family: 'Bungee Outline', cursive;
-            }
+    & h2{
+        text-align: center;
+        font-size: clamp(5.5rem, 5.69vw, 11rem);
+        letter-spacing: 5px;
+        & span{
+            font-size: clamp(3.5rem, 4.30vw, 7.6rem);
+            font-family: 'Bungee Outline', cursive;
         }
     }
     & .area-de-diferenciais{
@@ -163,22 +149,18 @@ main{
                     border-left: 1px solid var(--branco);
                     &:hover{
                         background-color: var(--vermelho-claro);
-                        border: none;
                     }
                 }
             }
             &:nth-child(3){
                 & a span{
                     font-size: clamp(1.8rem, 1.2vw, 1.95rem);
-                    margin-left: 10px;
                 }
             }
-            & figure{
-                & figcaption h3{
-                    font-size: clamp(2.4rem, 1.94vw, 3.2rem);
-                    letter-spacing: 1px;
-                    white-space: nowrap;
-                }
+            & figure figcaption h3{
+                font-size: clamp(2.4rem, 1.94vw, 3.2rem);
+                letter-spacing: 1px;
+                white-space: nowrap;
             }
             & p{
                 font-size: clamp(1.48rem, 1.25vw, 2.2rem);
@@ -194,15 +176,13 @@ main{
                 transition: all 0.2s ease-in-out;
                 & span{
                     position: absolute;
-                    left: 0;
-                    margin-left: 15px;
+                    left: 15px;
                     width: 55%;
                     font-size: clamp(1.6rem, 1.11vw, 1.75rem);
                 }
                 & img{
                     position: absolute;
-                    right: 0;
-                    margin-right: 41.5px;
+                    right: 41.5px;
                 }
             }
         }
@@ -216,7 +196,6 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    align-items: center;
     padding: 10px clamp(20px, 5.5vw, 69px);
     padding-bottom: 25px;
     & h2{
@@ -264,8 +243,7 @@ main{
             & h3{
                 font-size: clamp(3.2rem, 2.91vw, 4.8rem);
                 background-color: #000;
-                text-indent: 21px;
-                padding: 11px 0px;
+                padding: 11px 0px 11px 21px;
                 letter-spacing: 1px;
             }
             & .preco-do-plano{
@@ -309,13 +287,11 @@ main{
     background-size: contain;
     background-repeat: no-repeat;
     min-height: 80vh;
-    background-color: var(--vermelho-padrao);
     padding: 10px clamp(20px, 5.5vw, 69px) 0px;
     display: flex;
-    align-items: center;
     justify-content: space-evenly;
     & img{
-        min-width: clamp(434px, 30.2vw, 510px);
+        min-width: clamp(434px, 30.1vw, 510px);
         display: flex;
         align-self: flex-end;
     }
@@ -324,7 +300,6 @@ main{
         flex-direction: column;
         justify-content: center;
         gap: clamp(35px, 4.5vw, 70px);
-        width: fit-content;
         padding-bottom: 20px;
         & .introducao{
             margin-top: -25px;
@@ -348,8 +323,7 @@ main{
             text-align: center;
             align-self: center;
             & h3{
-                font-size: clamp(4.4rem, 4.3vw, 7.6rem);
-                width: 70%;
+                font-size: clamp(4.4rem, 4.3vw, 7.6rem);              
             }
             & p{
                 font-size: clamp(1.6rem, 1.25vw, 2.2rem);
@@ -397,7 +371,6 @@ main{
                 font-size: clamp(1.4rem, 1.25vw, 2.4rem);
                 font-family: 'Montserrat', sans-serif;
                 border: 1px solid #D9D9D9;
-                cursor: pointer;
                 &::placeholder{
                     color: var(--branco);
                 }
@@ -407,6 +380,7 @@ main{
                 font-size: clamp(1.4rem, 1.25vw, 2.4rem);
                 font-family: 'Montserrat', sans-serif;
                 background-color: var(--vermelho-claro-medio);
+                color: var(--branco);
                 display: block;
                 border: none;
                 margin-top: 40px;
@@ -424,13 +398,11 @@ main{
         position: relative;
         width: 50%;
         min-height: 60vh;
-        align-self: flex-end;
         & img{
-            min-width: clamp(440px, 30.6vw, 530px);
+            min-width: clamp(440px, 30.5vw, 530px);
             position: absolute;
-            bottom: 0;
+            bottom: -20px;
             right: 0;
-            margin-bottom: -20px;
         }
     }
 }
@@ -440,15 +412,12 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
     & nav{
         height: 100%;
         & address{
             display: flex;
-            justify-content: center;
             flex-direction: column;
             height: 100%;
-            justify-content: space-between;
             text-align: center;
             & ul{
                 display: flex;
@@ -461,7 +430,7 @@ main{
                         cursor: pointer;
                         scale: 1.15;
                         & path{
-                            color: var(--preto);
+                            color: var(--preto);   
                         }
                         &::before{
                             content: '';
@@ -469,8 +438,8 @@ main{
                             height: 5%;
                             bottom: 3.5px;
                             position: absolute;
-                            box-shadow: 0px 4px var(--preto);
-                        }
+                            box-shadow: 0px 2px var(--preto);
+                        } 
                     }
                 }
             }
@@ -478,6 +447,7 @@ main{
                 margin-bottom: 10px;
                 font-size: 18px;
                 font-family: 'Montserrat', sans-serif;
+                color: var(--branco);
             }
         }
     }
