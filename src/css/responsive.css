@@ -18,6 +18,7 @@
     }
     
     main{
+        height: 93.8vh;
         & .cabecalho{
             & nav{
                 & ul{
@@ -43,8 +44,7 @@
             }
         }
         & .secao-inicial{
-            height: 73.75vh;
-            align-items: center;
+            height: 73.8vh;
             justify-content: center;
             & .area-de-introducao{
                 margin-top: 7.5vh;
@@ -59,10 +59,9 @@
                 }
                 & p{
                     padding: 0 1rem;
-                    margin-bottom: 5px;
                 }
                 & .btn{
-                    margin-top: 12px;
+                    margin-top: 17px;
                     clip-path: none;
                     border-radius: 1rem 10rem / 12rem 10rem;
                 }
@@ -72,7 +71,7 @@
 
     & .secao-de-equipamentos{
         min-height: 80vh;
-        gap: 20px;
+        gap: 15px;
         & .area-de-diferenciais{
             gap: 10px;
             & article{
@@ -99,12 +98,12 @@
     & .secao-de-servicos{
         & .informacoes-gerais{
             text-align: center;
+            margin-top: 10px;
             & .introducao{
                 display: flex;
                 flex-direction: column;
                 gap: 35px;
                 & h2{
-                    margin-top: 20px;
                     line-height: 70px;
                     & span{
                         display: block;
@@ -115,7 +114,6 @@
                 }
            }
             & .dados{
-                width: 100%;
                 justify-content: center;
                 flex-wrap: wrap;
                 & article{
@@ -139,18 +137,16 @@
         justify-content: center;
         & .area-do-formulario{
             text-align: center;
-            gap: 10px;
+            gap: 1rem;
             & .formulario{
                 & div{
                     & input{
-                        margin: auto 20px 20px 20px;
+                        margin: auto 20px 40px;
                     }
                 }
                 & input{
-                    margin: 0;
                     &#submit{
                         margin: auto;
-                        margin-top: 20px;
                     }
                 }
             }
@@ -191,10 +187,6 @@
         }
     }
 
-    h1 *{
-        line-height: 7rem;
-    }
-
     .secao-de-servicos{
         & .informacoes-gerais{
             & .introducao{
@@ -210,5 +202,9 @@
                 }
             }
         }
+    }
+    
+    h1, h2 *{
+        line-height: 7rem;
     }
 }

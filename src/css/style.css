@@ -121,7 +121,7 @@ main{
     align-items: center;
     justify-content: center;
     gap: 50px;
-    padding: clamp(10px, 2vw, 20px) clamp(20px, 5.5vw, 69px) clamp(20px, 5.5vw, 69px);
+    padding: 0px clamp(20px, 5.5vw, 69px) 20px;
     & h2{
         text-align: center;
         font-size: clamp(5.5rem, 5.69vw, 11rem);
