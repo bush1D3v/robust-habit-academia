@@ -183,6 +183,9 @@
                         white-space: nowrap;
                     }
                 }
+                & p{
+                    width: 110%;
+                }
             }
         }
     }
