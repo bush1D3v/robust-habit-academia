@@ -1,6 +1,6 @@
 html{
     font-size: 62.5%;
-    background-color: var(--preto);
+    background-color: var(--vermelho-padrao);
     scroll-behavior: smooth;
     overflow-x: hidden;
 }
@@ -135,7 +135,8 @@ main{
     gap: 50px;
     padding: clamp(10px, 2vw, 20px) clamp(20px, 5.5vw, 69px) clamp(20px, 5.5vw, 69px);
     & .text-area{
-        & h1{
+        & h2{
+            text-align: center;
             font-size: clamp(5.5rem, 5.69vw, 11rem);
             letter-spacing: 5px;
             & span{
@@ -173,7 +174,7 @@ main{
                 }
             }
             & figure{
-                & figcaption h1{
+                & figcaption h3{
                     font-size: clamp(2.4rem, 1.94vw, 3.2rem);
                     letter-spacing: 1px;
                     white-space: nowrap;
@@ -218,7 +219,9 @@ main{
     align-items: center;
     padding: 10px clamp(20px, 5.5vw, 69px);
     padding-bottom: 25px;
-    & h1{
+    & h2{
+        text-align: center;
+        margin-bottom: 10px;
         font-size: clamp(5.5rem, 5.69vw, 11rem);
         letter-spacing: 5px;
     }
@@ -254,11 +257,11 @@ main{
                         font-weight: 700;
                     }
                 }
-                & h2{
+                & h3{
                     background-color: var(--vermelho-claro);
                 }
             }
-            & h2{
+            & h3{
                 font-size: clamp(3.2rem, 2.91vw, 4.8rem);
                 background-color: #000;
                 text-indent: 21px;
@@ -325,7 +328,7 @@ main{
         padding-bottom: 20px;
         & .introducao{
             margin-top: -25px;
-            & h1{
+            & h2{
                 font-size: clamp(5.5rem, 5.7vw, 9.6rem);
                 margin-bottom: clamp(-25px, 1vw, 0px);
                 white-space: nowrap;
@@ -344,7 +347,7 @@ main{
             gap: clamp(20px, 3.4vw, 50px);
             text-align: center;
             align-self: center;
-            & h2{
+            & h3{
                 font-size: clamp(4.4rem, 4.3vw, 7.6rem);
                 width: 70%;
             }
@@ -361,6 +364,7 @@ main{
 }
 
 .secao-de-registro{
+    background-color: var(--preto);
     min-height: 60vh;
     padding: 10px clamp(20px, 5.5vw, 69px) 20px;
     display: flex;
@@ -368,7 +372,7 @@ main{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        & h1{
+        & h2{
             font-size: clamp(5.5rem, 5.69vw, 9.6rem);
             letter-spacing: 1px;
         }
@@ -381,6 +385,10 @@ main{
              & div{
                 position: relative;
                 display: inline-block;
+                & small{
+                    display: none;
+                    font-family: 'Montserrat', sans-serif;
+                }
             }
             & input{
                 background-color: transparent;
@@ -428,11 +436,41 @@ main{
 }
 
 .rodape{
-    background-color: var(--vermelho-padrao);
     height: 30vh;
-}
-
-small{
-    display: none;
-    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    & nav{
+        height: 100%;
+        & address{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            height: 100%;
+            justify-content: space-between;
+            text-align: center;
+            & ul{
+                display: flex;
+                gap: 15px;
+                font-size: 30px;
+                margin: auto;
+                margin-top: 12.5vh;
+                & li{
+                    &:hover{
+                        cursor: pointer;
+                        scale: 1.15;
+                        & path{
+                            color: var(--preto);
+                        }
+                    }
+                }
+            }
+            & span{
+                margin-bottom: 10px;
+                font-size: 18px;
+                font-family: 'Montserrat', sans-serif;
+            }
+        }
+    }
 }
