@@ -27,18 +27,10 @@ const nameDiv = document.getElementById('nome')
 const phoneDiv = document.getElementById('telefone')
 const errorClass = 'error'
 
-const verificarNumeral = (texto) => {
-    return /\d/.test(texto);
-}
-
-const verificarString = (numero) => {
-    return /[a-zA-Z]/.test(numero);
-}
-
 function nameValidation(){
     const nameValue = nameInput.value.trim()
 
-    if(nameValue.length < 6 || verificarNumeral(nameValue)){
+    if(nameValue.length < 6){
         nameDiv.classList.add(errorClass)
         return false
     }else{
@@ -47,10 +39,18 @@ function nameValidation(){
     }
 }
 
+nameInput.addEventListener('input', () => {
+    const inputValue = nameInput.value
+    const cleanValue = inputValue.replace(/\d/g, '')
+    const maxCleanValue = cleanValue.replace(/[^\w\sÀ-ÖØ-öø-ÿ]|!/gi, '')
+    nameInput.value = maxCleanValue
+    nameValidation()
+})
+
 function phoneValidation(){
     const phoneValue = phoneInput.value.trim()
 
-    if(phoneValue.length < 10 || verificarString(phoneValue)){
+    if(phoneValue.length < 10){
         phoneDiv.classList.add(errorClass)
         return false
     }else{
@@ -58,6 +58,14 @@ function phoneValidation(){
         return true
     }
 }
+
+phoneInput.addEventListener('input', () => {
+    const inputValue = phoneInput.value
+    const cleanValue = inputValue.replace(/[a-zA-Z]/g, '')
+    const maxCleanValue = cleanValue.replace(/[^\w\s]/gi, '')
+    phoneInput.value = maxCleanValue
+    phoneValidation()
+});
 
 form.addEventListener("submit", (event) => {
     event.preventDefault()
@@ -70,12 +78,4 @@ form.addEventListener("submit", (event) => {
         })
         form.reset()
     }
-  })
-
-  nameInput.addEventListener('keyup', () => {
-    nameValidation()
-  })
-
-  phoneInput.addEventListener('keyup', () => {
-    phoneValidation()
   })
