@@ -4,6 +4,7 @@
     box-sizing: border-box;
     color: var(--branco);
     font-family: 'Bebas Neue', sans-serif;
+    
 }
 
 li{
@@ -16,4 +17,9 @@ a{
 
 img{
     pointer-events: none;
+}
+
+::selection{
+    background: var(--preto);
+    color: var(--vermelho-claro-medio);
 }
