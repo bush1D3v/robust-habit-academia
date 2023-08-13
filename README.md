@@ -1,9 +1,10 @@
 # Página da Robust Habit Academia
+![green-square-modern-fitness-logo](https://github.com/bush1D3v/robust-habit-academia/assets/133554156/395731f4-336a-4988-9861-7213ffa23d15)
 
 Tabela de conteúdos
 =================
-<!--ts-->
    * [Sobre](#sobre)
+   * [Figma](#figma)
    * [Tabela de Seções](#seções-do-site)
       * [Cabeçalho](#cabeçalho)
       * [Seção de Equipamentos](#seção-de-equipamentos)
@@ -12,11 +13,14 @@ Tabela de conteúdos
       * [Seção de Registro](#seção-de-registro)
       * [Rodapé](#rodapé)
    * [Tecnologias](#tecnologias-utilizadas)
-   * [Desafios](#desafios-no-coding)
-<!--te-->
+   * [Desafios](#desafios-durante-o-coding)
 
 ## Sobre
-Uma página completa da academia Robust Habit, com diferentes seções categorizadas e indexadas a partir do cabeçalho, além de possuir uma área de formulário para contato, possuindo em sí validação de dados e envio dos mesmos em arquivo JSON.
+Uma página completa da academia **Robust Habit**, com diferentes seções categorizadas e indexadas a partir do cabeçalho, além de possuir uma área de formulário para contato, possuindo em sí **validação de dados** e envio dos mesmos em **arquivo JSON.**
+
+## Figma
+
+[![Download File](https://raw.githubusercontent.com/ChristianFJung/simple-github-buttons/master/DownloadFile.svg)]([http://link-HERE.christianfjung.com](https://www.figma.com/file/u7UFBMAmPNn2Y2nLL1w31m/academia?node-id=16%3A24&mode=dev))
 
 ## Seções do Site
 
@@ -40,4 +44,4 @@ Uma página completa da academia Robust Habit, com diferentes seções categoriz
     <img align='center' height='40' width='60' title='JavaScript' alt='javascript' src='https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg' />
 </div>
 
-## Desafios no Coding
+## Desafios Durante o Coding
