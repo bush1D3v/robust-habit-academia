@@ -90,6 +90,7 @@
                 }
             }
             & ul{
+                z-index: 1;
                 padding: 20px;
                 opacity: 0;
                 display: flex;
