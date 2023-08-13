@@ -50,7 +50,7 @@ Uma página completa da academia **Robust Habit**, com diferentes seções categ
 - ### Seção de Preços
 ![Screenshot_4](https://github.com/bush1D3v/robust-habit-academia/assets/133554156/2f653158-7283-462a-9dc3-a3356a520bbe)
 
-> <p>A seção de preços possui o objetivo de ser <strong>mais direta</strong> com o cliente. Demonstrando seus <strong>planos diversos</strong> e <strong>preços variados</strong>, cada seção ilustra <strong>perfeitamente</strong> as informações necessárias para que o cliente possa <strong>decidir qual produto adquirir</strong>, além de possuir uma recomendação, em que nela tem-se o plano <strong>mais comprado</strong> pelos consumidores.</p>
+> <p>A seção de preços possui o objetivo de ser <strong>mais direta</strong> com o cliente. Demonstrando seus <strong>planos diversos</strong> e <strong>preços variados</strong>, cada seção ilustra <strong>perfeitamente</strong> as informações necessárias para que o cliente possa <strong>decidir qual produto adquirir</strong>, além de possuir uma recomendação, em que se tem o plano <strong>mais comprado</strong> pelos consumidores.</p>
 
 ##
 
@@ -71,7 +71,7 @@ Uma página completa da academia **Robust Habit**, com diferentes seções categ
 - ### Rodapé
 ![Screenshot_7](https://github.com/bush1D3v/robust-habit-academia/assets/133554156/72898142-998e-41c7-98bb-d0b68d1557e5)
 
-> <p>Ao final da página temos o rodapé. Simples e com um design <strong>"clean"</strong>, ele possui apenas as <strong>informações do desenvolvedor</strong> que criou a página (minhas haha), sendo as redes sociais como <strong>Linkedin</strong> e <strong>Discord</strong>, além de possuir ao final <strong>o nome do mesmo</strong>, juntamente do símbolo de <strong>copyright</strong> (&copy;). Essa seção, no caso de ser um projeto <strong>feito para uma empresa</strong>, pode-se ter suas informações <strong>recolocadas</strong>, como <strong>e-mail</strong> e <strong>número de celular para contato</strong>, <strong>endereço</strong>, <strong>área de FAQ</strong>, dentre <strong>outras informações da mesma.</strong></p>
+> <p>Ao final da página temos o rodapé. Simples e com um design <strong>"clean"</strong>, ele possui apenas as <strong>informações do desenvolvedor</strong> que criou a página (minhas haha), sendo as redes sociais como <strong>Linkedin</strong> e <strong>Discord</strong>, além de possuir também <strong>o nome do mesmo</strong>, juntamente do símbolo de <strong>copyright</strong> (&copy;). Essa seção, no caso de ser um projeto <strong>feito para uma empresa</strong>, pode-se ter suas informações <strong>recolocadas</strong>, como <strong>e-mail</strong> e <strong>número de celular para contato</strong>, <strong>endereço</strong>, <strong>área de FAQ</strong>, dentre <strong>outras informações da mesma.</strong></p>
 
 ## Tecnologias Utilizadas
 
@@ -86,30 +86,31 @@ Uma página completa da academia **Robust Habit**, com diferentes seções categ
 Esse projeto foi, de fato, o<strong> mais desafiador de toda minha carreira como desenvolvedor</strong>.<br>
 Aparição dos elementos ao scrollar, utilização de expressões regulares, validação de formulário, envio de arquivo JSON, propriedades CSS desconhecidas... tudo isso escrito anteriormente foi apenas <strong>ALGUNS</strong> dos desafios que eu enfrentei nessas três semanas de <strong>INTENSA produção</strong>.<br><br>
 Admito que, com todo o <strong>esforço</strong> e <strong>tempo dedicado ao projeto</strong>, me sinto muito realizado de poder dizer que o desenvolvi da forma <strong>EXATA como eu desejava.</strong><br>
-O "bug" que posso citar como o mais complexo de resolver, foi o que criava um <strong>scroll horizontal no momento de carregamento da pégina</strong>. Admito ter passado cerca de <strong>duas horas</strong> para descobrir que eu tinha que colocar apenas alguns `overflow-x: hidden` em um conjunto <strong>ESPECÍFICO de seções</strong>, e caso esteja se perguntando: <strong>sim, eu descobri isso adicionando a propriedade em CADA ELEMENTO ESTILIZADO.</strong><br><br>
+O "bug" que posso citar como o mais complexo de resolver, foi o que criava um <strong>scroll horizontal no momento de carregamento da página</strong>. Admito ter passado cerca de <strong>duas horas</strong> para descobrir que eu tinha que colocar apenas alguns `overflow-x: hidden` em um conjunto <strong>ESPECÍFICO de seções</strong>, e caso esteja se perguntando: <strong>sim, eu descobri isso adicionando a propriedade em CADA ELEMENTO ESTILIZADO.</strong><br><br>
 Posso dizer que evolui <strong>muito com este projeto</strong>, desde melhorar minha <strong>percepção</strong> e <strong>programação</strong> no posicionamento de elementos e utilização do flex para criar um <strong>design responsivo mais automático</strong>, até a <strong>utilização de expressões regulares</strong>, criação de estilização utilizando <strong>pseudo-classes</strong> e <strong>pseudo-elementos</strong>, e uma evolução <strong>GIGANTESCA</strong> na utilização do `&`, como forma de codificar estilos dentro do CSS utilizando como forma de organização o <strong>conceito "tag pai-tag filho"</strong>.<br><br>
 
 ## Utilização do & no CSS:
 
 ```CSS
 .secao-de-servicos{
-        & .informacoes-gerais{
-            text-align: center;
-            margin-top: 10px;
-            & .introducao{
-                display: flex;
-                flex-direction: column;
-                gap: 35px;
-                & h2{
-                    line-height: 70px;
-                    & span{
-                        display: block;
-                    }
+    & .informacoes-gerais{
+        text-align: center;
+        margin-top: 10px;
+        & .introducao{
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
+            & h2{
+                line-height: 70px;
+                & span{
+                    display: block;
                 }
-                & p{
-                    padding: 0 7%;
-                }
-           }
-            & .dados{...}
+            }
+            & p{
+                padding: 0 7%;
+            }
+        }
+        & dados{...}
     }
+}
 ```
