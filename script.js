@@ -68,14 +68,10 @@ phoneInput.addEventListener('input', () => {
 });
 
 form.addEventListener("submit", (event) => {
-    event.preventDefault()
-    nameValidation()
     phoneValidation()
-    if(nameValidation() && phoneValidation()){
-        console.log({
-            nome: nameInput.value.trim(),
-            telefone: phoneInput.value.trim()
-        })
-        form.reset()
+    if(!nameValidation() || !phoneValidation()){
+        event.preventDefault()
+    }else{
+        form.submit()
     }
-  })
+})
