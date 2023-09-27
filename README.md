@@ -88,7 +88,7 @@ Admito que, com todo o <strong>esforço</strong> e <strong>tempo dedicado ao pro
 O "bug" que posso citar como o mais complexo de resolver, foi o que criava um <strong>scroll horizontal no momento de carregamento da página</strong>. Admito ter passado cerca de <strong>duas horas</strong> para descobrir que eu tinha que colocar apenas alguns `overflow-x: hidden` em um conjunto <strong>ESPECÍFICO de seções</strong>, e caso esteja se perguntando: <strong>sim, eu descobri isso adicionando a propriedade em CADA ELEMENTO ESTILIZADO.</strong><br><br>
 Posso dizer que evolui <strong>muito com este projeto</strong>, desde melhorar minha <strong>percepção</strong> e <strong>programação</strong> no posicionamento de elementos e utilização do flex para criar um <strong>design responsivo mais automático</strong>, até a <strong>utilização de expressões regulares</strong>, criação de estilização utilizando <strong>pseudo-classes</strong> e <strong>pseudo-elementos</strong>, e uma evolução <strong>GIGANTESCA</strong> na utilização do `&`, como forma de codificar estilos dentro do CSS utilizando como forma de organização o <strong>conceito "tag pai-tag filho"</strong>.<br><br>
 
-## Utilização do & no CSS:
+## Utilização do & no CSS
 
 ```CSS
 .secao-de-servicos{
