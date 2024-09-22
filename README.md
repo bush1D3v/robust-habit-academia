@@ -1,6 +1,20 @@
 # Página da Robust Habit Academia
 ![green-square-modern-fitness-logo](https://github.com/bush1D3v/robust-habit-academia/assets/133554156/395731f4-336a-4988-9861-7213ffa23d15)
 
+Inicializando o Projeto
+
+Linux:
+
+``bash
+python3 -m http.server
+``
+
+Windows:
+
+``bash
+python -m http.server
+``
+
 Tabela de conteúdos
 =================
    * [Sobre](#sobre)
